@@ -40,6 +40,11 @@ Set a specific volume level (e.g., 75%):
 .\MicrophoneLevelGuard.ps1 -DefaultVolume 75
 ```
 
+Set interval delay (e.g., 1000ms):
+```powershell
+.\MicrophoneLevelGuard.ps1 -Interval 1000
+```
+
 Show detailed progress with verbose logging:
 
 ```powershell
@@ -61,13 +66,14 @@ View help and usage information:
 ## Parameters
 
 - `-DefaultVolume <0-100>`: Sets the target volume level (0-100%). If not specified, uses current volume.
+- `-Interval <ms>`: Sets the loop interval in miliseconds. Default to 500ms
 - `-Help`: Shows the help message with usage instructions.
 - `-Verbose`: Shows detailed progress messages.
 - `-WhatIf`: Shows what changes would be made without actually making them.
 
 ## How It Works
 
-The script runs in a continuous loop, checking the microphone volume every 500 milliseconds. If it detects that the volume has changed from the specified level, it automatically restores it to the desired value.
+The script runs in a continuous loop, checking the microphone volume every 500 milliseconds (or specified by the user). If it detects that the volume has changed from the specified level, it automatically restores it to the desired value.
 
 When started, it displays a list of all available input devices, highlighting the current default device. The script will continue running until interrupted with Ctrl+C.
 
