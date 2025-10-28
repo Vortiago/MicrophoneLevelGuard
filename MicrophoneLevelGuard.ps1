@@ -3,6 +3,7 @@ param (
     [Parameter(Mandatory=$false)]
     [ValidateRange(0,100)]
     [int]$DefaultVolume = -1,
+    [int]$Interval = 500,
 
     [Parameter(Mandatory=$false)]
     [switch]$Help
@@ -22,6 +23,9 @@ Usage:
 Parameters:
     -DefaultVolume <0-100>
         Sets the target volume level (0-100%). If not specified, uses current volume.
+
+    -Interval <ms>
+        Sets the loop interval in miliseconds
     
     -Help
         Shows this help message.
@@ -118,5 +122,5 @@ while ($true) {
         Set-MicrophoneVolume -Volume $DefaultVolume
     }
 
-    Start-Sleep -Milliseconds 500
+    Start-Sleep -Milliseconds $Interval
 }
