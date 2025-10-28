@@ -77,6 +77,12 @@ The script runs in a continuous loop, checking the microphone volume every 500 m
 
 When started, it displays a list of all available input devices, highlighting the current default device. The script will continue running until interrupted with Ctrl+C.
 
+## Creating a scheduled task to keep it running without interaction
+
+- Open Windows Task Manager
+- Go to Action -> Import Task
+- Import the file Microphone_100%.xml (Before Importing it update the <path> in the XML file to the directory where you have stored the MicrophoneLevelGuard.ps1 file in your computer)
+
 ## Troubleshooting
 
 If you encounter permission issues, try running PowerShell as Administrator.
