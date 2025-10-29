@@ -81,7 +81,10 @@ When started, it displays a list of all available input devices, highlighting th
 
 - Open Windows Task Manager
 - Go to Action -> Import Task
-- Import the file Microphone_100%.xml (Before Importing it update the <path> in the XML file to the directory where you have stored the MicrophoneLevelGuard.ps1 file in your computer)
+- Import the file Microphone_100%.xml (Before importing, update the `-File` argument in the XML file to the directory where you have stored the MicrophoneLevelGuard.ps1 file in your computer)
+- Select the option **Run whether user is logged on or not** (avoid console popping up)
+- Check the **Do not store password. The task will only have access to local computer resources.** checkbox
+- Press OK.
 
 ## Troubleshooting
 
